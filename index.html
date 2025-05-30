@@ -1,0 +1,40 @@
+<!-- index.html - Discord Login Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Chaos RP</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body id="pala">
+  <div class="container">
+    <h1>Welcome to Chaos Roleplay</h1>
+    <p>Login with Discord to access the shop.</p>
+    <a class="btn" id="discord-login" href="#">
+      Login with Discord
+    </a>
+  </div>
+
+  <script>
+    const clientId = '1369437024586694666';
+    const redirectUri = 'https://mouhamedsdiri.github.io/chaos-roleplay-site/';
+    const scope = 'identify';
+    const responseType = 'token';
+
+    document.getElementById('discord-login').href = 
+      `https://discord.com/api/oauth2/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=${responseType}&scope=${scope}`;
+
+    // Check if we were redirected back with a token
+    const fragment = new URLSearchParams(window.location.hash.slice(1));
+    const accessToken = fragment.get('access_token');
+
+    if (accessToken) {
+      // Save token if needed, or pass it along (e.g. to dashboard)
+      localStorage.setItem('discord_token', accessToken);
+      window.location.href = "/dashboard.html"; // redirect to dashboard
+    }
+  </script>
+  <script src="script.js" defer></script>
+</body>
+</html>

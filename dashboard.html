@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Chaos RP</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<button id="logoutBtn" class="logout-button">Logout</button>
+
+<style>
+.logout-button {
+  position: absolute;
+  top: 80px;
+  right: 40px;
+  padding: 15px 30px;
+  background-color: #5865F2;
+  color: white;
+  text-decoration: none;
+  font-size: 0.8em;
+  border-radius: 13px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.logout-button:hover {
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  transform: scale(1.05);
+}
+</style>
+
+<body id="pala2">
+  <div id="overlay">
+    <!-- User Info -->
+    <div id="user-info">
+      <img id="user-avatar" src="" alt="Avatar">
+      <span id="user-name">Loading...</span>
+    </div>
+    
+    <div>
+      <img src="https://i.postimg.cc/qB2gY1yk/Chat-GPT-Image-9-mai-2025-22-20-23.png" id="pala1">
+    </div>
+
+    <div id="dashboard-container">
+      <h1 id="main-title">Welcome to Chaos Roleplay Catalog</h1>
+      <p id="main-description">Explore the categories below to browse our custom vehicles, characters, and businesses.</p>
+
+      <div id="card-grid-layout">
+        <!-- Top Row -->
+        <div id="top-row">
+          <a id="card-vehicles" href="/vehicles.html">
+            <img id="img-vehicles" src="https://s2.modshost.org/wp-content/uploads/2025/05/gta-5-lamborghini-sc63-2024-add-on-fivem-2-scaled.jpg" alt="Vehicles">
+            <div id="card-content-vehicles">
+              <h2 id="title-vehicles">Vehicles</h2>
+              <p id="desc-vehicles">Browse custom cars and unique additions to the server fleet.</p>
+            </div>
+          </a>
+
+          <a id="card-peds" href="/peds.html">
+            <img id="img-peds" src="https://static.wikia.nocookie.net/nopixel/images/3/3d/Hurt_xornwood.png" alt="Peds">
+            <div id="card-content-peds">
+              <h2 id="title-peds">Peds</h2>
+              <p id="desc-peds">Discover custom characters and skins for your RP experience.</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Bottom Centered -->
+        <div id="center-row">
+          <a id="card-enterprises" href="/enterprises.html">
+            <img id="img-enterprises" src="https://images-ext-1.discordapp.net/external/Fyd2eCwPp99IRustp5MW7pQ-wJMM3MtTVhfCc02rKXg/https/i.postimg.cc/wTQY8PZX/will-gta-6-surpass-gta-5-in-sales-and-overall-success-its-v0-h5s4m08s1p2b1.webp?format=webp&width=1423&height=800" alt="Enterprises">
+            <div id="card-content-enterprises">
+              <h2 id="title-enterprises">Enterprises</h2>
+              <p id="desc-enterprises">Explore available businesses and organizations in the city.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const token = localStorage.getItem("discord_token");
+    if (token) {
+      fetch("https://discord.com/api/users/@me", {
+        headers: { Authorization: `Bearer ${token}` }
+      })
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("user-name").textContent = data.username;
+        document.getElementById("user-avatar").src = `https://cdn.discordapp.com/avatars/${data.id}/${data.avatar}.png`;
+      })
+      .catch(() => {
+        document.getElementById("user-name").textContent = "User";
+      });
+    }
+  </script>
+  <script src="script.js" defer></script>
+</body>
+</html>

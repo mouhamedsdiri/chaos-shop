@@ -1,0 +1,371 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1e1e2f;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.container, .dashboard {
+  text-align: center;
+  margin-top: 100px;
+}
+
+header {
+  padding: 20px;
+  background: #27273c;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.btn {
+  padding: 12px 24px;
+  background: #5865F2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  margin: 10px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #4752c4;
+}
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #2e2e40;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+  padding: 10px;
+  box-shadow: 0 0 10px #0006;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card .info {
+  padding: 10px;
+}
+
+.card button {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  background: #00c896;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: #009f79;
+}
+
+
+/*the index
+/* Background image and overlay */
+#pala {
+  background: url('https://i.postimg.cc/MH0KtFWY/Mf-G3sh-I9-Q6y2w-K-3-Y4-TNg.png') center;
+  background-size: 75%;
+  height: 75vh;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.7); /* dark overlay */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin-top: 11%;
+  margin-left: 30%;
+  border: solid;
+  border-bottom: 30%;
+  align-items: center;
+  text-align: center;
+  color: white;
+  max-width: 500px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 0 55px rgba(255, 255, 255, 0.2);
+}
+
+.container {
+  margin-left: 33%;
+  border: solid;
+  border-bottom: 30%;
+  align-items: center;
+  text-align: center;
+  color: white;
+  max-width: 500px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+/* Discord login button */
+.btn {
+  padding: 15px 30px;
+  background-color: #5865F2;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: #4752c4;
+}
+/*dashbord*/
+/* Background overlay */
+#pala2 {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* User Info Box */
+#user-info {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: white;
+}
+
+#user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+#user-name {
+  font-weight: bold;
+}
+
+/* Main Container */
+#dashboard-container {
+  text-align: center;
+  color: white;
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+#main-title {
+  font-size: 2.5rem;
+}
+
+#main-description {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+/* Layout Structure */
+#card-grid-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+#top-row {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#center-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Card Common Styles */
+#card-vehicles, #card-peds, #card-enterprises {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  width: 280px;
+}
+
+#card-vehicles:hover,
+#card-peds:hover,
+#card-enterprises:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+/* Card Images */
+#img-vehicles, #img-peds, #img-enterprises {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Card Content */
+#card-content-vehicles,
+#card-content-peds,
+#card-content-enterprises {
+  padding: 20px;
+}
+
+#title-vehicles,
+#title-peds,
+#title-enterprises {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+#desc-vehicles,
+#desc-peds,
+#desc-enterprises {
+  font-size: 1em;
+  opacity: 0.9;
+}
+#pala1 {
+  width: 8%;
+  height: 8%;
+}
+/*vehicles */
+
+
+
+
+
+
+
+
+#vehicle-header {
+  text-align: center;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+  padding: 20px;
+}
+
+#vehicle-catalog {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+#vehicle-card {
+  background: #1b1f23;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  gap: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+#vehicle-images {
+  flex: 1;
+}
+
+#main-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#image-thumbnails {
+  display: flex;
+  gap: 10px;
+}
+
+#image-thumbnails img {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+#image-thumbnails img:hover {
+  transform: scale(1.1);
+}
+
+#vehicle-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#buttons button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+#buttons button:first-child {
+  background-color: #00c853;
+  color: white;
+}
+
+#buttons button:last-child {
+  background-color: #d500f9;
+  color: white;
+}
+
+#buttons button:hover {
+  opacity: 0.9;
+}
+

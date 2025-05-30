@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vehicles - Chaos RP</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- User Info -->
+    <div id="user-info">
+      <img id="user-avatar" src="" alt="Avatar">
+      <span id="user-name">Loading...</span>
+    </div>
+    <div>
+      <img src="https://i.postimg.cc/qB2gY1yk/Chat-GPT-Image-9-mai-2025-22-20-23.png" id="pala1">
+      <button id="logoutBtn" class="logout-button">Logout</button>
+
+<style>
+.logout-button {
+  position: absolute;
+  top: 78px;
+  right: 40px;
+  padding: 15px 30px;
+  background-color: #5865F2;
+  color: white;
+  text-decoration: none;
+  font-size: 0.8em;
+  border-radius: 13px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.logout-button:hover {
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  transform: scale(1.05);
+}
+</style>
+    </div>
+    
+  <header id="vehicle-header">
+    <h1>🚗 Vehicle Catalog</h1>
+  </header>
+  
+
+  <main id="vehicle-catalog">
+    <div id="vehicle-card">
+      <div id="vehicle-images">
+        <img id="main-img" class="main-img" src="1.png" alt="Elegy" />
+        <div id="image-thumbnails" class="image-thumbnails">
+          <img src="1.png" onclick="changeMainImage(this)">
+          <img src="2.png" onclick="changeMainImage(this)">
+        </div>
+      </div>
+
+      <div id="vehicle-info">
+        <h2>NISSAN Silvia S15</h2>
+        <p>💰 Base Price: €20 (Normal) | VIP Price: €30</p>
+        <div id="buttons">
+          <button onclick="buyItem('NISSAN Silvia S15', '€20', 'https://i.postimg.cc/Gmf4NvxZ/2.png')">Buy Normal (€20)</button>
+          <button onclick="buyVIPItem('NISSAN Silvia S15', '€30', 'https://i.postimg.cc/Gmf4NvxZ/2.png')">Buy VIP (€30)</button>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+
+
+
+  <!--vehicle 2-->
+  <main id="vehicle-catalog">
+    <div id="vehicle-card">
+      <div id="vehicle-images">
+        <img id="main-img"  class="main-img" src="https://cdn.discordapp.com/attachments/1126911091126046801/1377118134690910288/32e7ba-1.png?ex=68387574&is=683723f4&hm=8e8a50532ab61f3ab72c0e34947cfc806817fe56c6a03831e100e984ac93750d&" alt="Elegy" />
+        <div id="image-thumbnails" class="image-thumbnails">
+          <img src="https://cdn.discordapp.com/attachments/1126911091126046801/1377118134690910288/32e7ba-1.png?ex=68387574&is=683723f4&hm=8e8a50532ab61f3ab72c0e34947cfc806817fe56c6a03831e100e984ac93750d&/300x200" onclick="changeMainImage(this)">
+          <img src="https://cdn.discordapp.com/attachments/1126911091126046801/1377118173043757096/32e7ba-2.png?ex=6838757e&is=683723fe&hm=2a4c17c199909fd55acf8fdb5393dc25c24b00ec5e063b51286eefd62985939f&/300x200?text=Angle+2" onclick="changeMainImage(this)">
+          <img src="https://cdn.discordapp.com/attachments/1126911091126046801/1377118259987353661/32e7ba-8.png?ex=68387592&is=68372412&hm=d21a1f5fbf061e294b497e36d1859a4e40420fda54167c13da3f39df9cea0420&/300x200?text=Angle+3" onclick="changeMainImage(this)">
+          <img src="https://cdn.discordapp.com/attachments/1126911091126046801/1377118301171486730/32e7ba-7.png?ex=6838759c&is=6837241c&hm=823adf8e9321a46e9790bcd46c046ac4c59aa155b54d0df6a317854e9ceccee1&/300x200?text=Angle+4" onclick="changeMainImage(this)">
+          <img src="https://cdn.discordapp.com/attachments/1126911091126046801/1377118343437221948/32e7ba-6.png?ex=683875a6&is=68372426&hm=841a9936db9814b3514b30f24fef49c61ae309c1fadbb604a48bc62d455b88e0&/300x200?text=Angle+5" onclick="changeMainImage(this)">
+          <img src="https://cdn.discordapp.com/attachments/1126911091126046801/1377118377708879882/32e7ba-5.png?ex=683875ae&is=6837242e&hm=61d356520b6079f5f41c098b23e41243de86e5c0e7e8cce25b4fd3218d7da8a6&/300x200?text=Angle+6" onclick="changeMainImage(this)">
+        </div>
+      </div>
+
+      <div id="vehicle-info">
+        <h2>BMW M3 E46</h2>
+        <p>💰 Base Price: €20 (Normal) | VIP Price: €30</p>
+        <div id="buttons">
+          <button onclick="buyItem('BMW M3 E46', '€20', 'https://cdn.discordapp.com/attachments/1126911091126046801/1377118134690910288/32e7ba-1.png?ex=68387574&is=683723f4&hm=8e8a50532ab61f3ab72c0e34947cfc806817fe56c6a03831e100e984ac93750d&')">Buy Normal (€20)</button>
+        <button onclick="buyVIPItem('BMW M3 E46', '€30', 'https://cdn.discordapp.com/attachments/1126911091126046801/1377118134690910288/32e7ba-1.png?ex=68387574&is=683723f4&hm=8e8a50532ab61f3ab72c0e34947cfc806817fe56c6a03831e100e984ac93750d&')">Buy VIP (€30)</button>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <!--vehicle 3-->
+  <main id="vehicle-catalog">
+    <div id="vehicle-card">
+      <div id="vehicle-images">
+        <img id="main-img"  class="main-img" src="https://cdn.discordapp.com/attachments/1126911091126046801/1377118415117877280/dee345-RX7.png?ex=683875b7&is=68372437&hm=ae7bc53307eba883ada08931324d3c71246e8d11eff070f3ffffce1a458081a3&" alt="Elegy" />
+        <div id="image-thumbnails" class="image-thumbnails">
+          <img src="https://cdn.discordapp.com/attachments/1126911091126046801/1377118415117877280/dee345-RX7.png?ex=683875b7&is=68372437&hm=ae7bc53307eba883ada08931324d3c71246e8d11eff070f3ffffce1a458081a3&/300x200" onclick="changeMainImage(this)">
+          <img src="https://cdn.discordapp.com/attachments/1126911091126046801/1377118470898057226/94de63-NVIDIA_Share_2019-02-08_00-39-21-43.png?ex=683875c5&is=68372445&hm=0e091751dcebbea06c9cf95c5a7086bf7edecd780c0abc749f86b2f61f5c11be&/300x200?text=Angle+2" onclick="changeMainImage(this)">
+          <img src="https://cdn.discordapp.com/attachments/1126911091126046801/1377118509972197466/94de63-NVIDIA_Share_2019-02-08_00-44-13-72.png?ex=683875ce&is=6837244e&hm=f6ef636e965bc80356c17e861614a17f8c96ffd03fdf91a8f3721f14999aa8bc&/300x200?text=Angle+3" onclick="changeMainImage(this)">
+          <img src="https://cdn.discordapp.com/attachments/1126911091126046801/1377118608395862116/94de63-GTA5_2019-02-09_14-05-25-45.png?ex=683875e5&is=68372465&hm=0f8eab364045b97455a286e5adde671358a20903933beeb4f319af8cbd72b08c&/300x200?text=Angle+4" onclick="changeMainImage(this)">
+          <img src="https://cdn.discordapp.com/attachments/1126911091126046801/1377118646538866748/94de63-NVIDIA_Share_2019-02-08_00-39-44-36.png?ex=683875ee&is=6837246e&hm=eefffd50406fea46d989ae49cef690e7e9a22a6bb991b00a198d879018d29513&/300x200?text=Angle+5" onclick="changeMainImage(this)">
+        </div>
+      </div>
+
+      <div id="vehicle-info">
+        <h2>MAZDA RX-7FD3S</h2>
+        <p>💰 Base Price: €20 (Normal) | VIP Price: €30</p>
+        <div id="buttons">
+          <button onclick="buyItem('MAZDA RX-7FD3S', '€20', 'https://cdn.discordapp.com/attachments/1126911091126046801/1377118415117877280/dee345-RX7.png?ex=683875b7&is=68372437&hm=ae7bc53307eba883ada08931324d3c71246e8d11eff070f3ffffce1a458081a3&')">Buy Normal (€20)</button>
+        <button onclick="buyVIPItem('MAZDA RX-7FD3S', '€30', 'https://cdn.discordapp.com/attachments/1126911091126046801/1377118415117877280/dee345-RX7.png?ex=683875b7&is=68372437&hm=ae7bc53307eba883ada08931324d3c71246e8d11eff070f3ffffce1a458081a3&')">Buy VIP (€30)</button>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+
+
+
+  <!--vehicle 4-->
+  <main id="vehicle-catalog">
+    <div id="vehicle-card">
+      <div id="vehicle-images">
+        <img id="main-img"  class="main-img" src="3.jpg" alt="Elegy" />
+        <div id="image-thumbnails" class="image-thumbnails">
+          <img src="3.jpg" onclick="changeMainImage(this)">
+          <img src="4.jpg" onclick="changeMainImage(this)">
+          <img src="5.jpg" onclick="changeMainImage(this)">
+          <img src="6.jpg" onclick="changeMainImage(this)">
+          <img src="7.jpg" onclick="changeMainImage(this)">
+          <img src="8.jpg" onclick="changeMainImage(this)">
+        </div>
+      </div>
+
+      <div id="vehicle-info">
+        <h2>Mercedes-Benz E55 AMG (W211)</h2>
+        <p>💰 Base Price: €20 (Normal) | VIP Price: €30</p>
+        <div id="buttons">
+          <button onclick="buyItem('Mercedes-Benz E55 AMG (W211)', '€20', 'https://cdn.discordapp.com/attachments/1126911091126046801/1377118974818517052/23179d-20240827231103_1.jpg?ex=6838763d&is=683724bd&hm=dc84f92672e2c7f95823aeee4c5bc2220123e60c0079d71fafb6d3a648c85340&')">Buy Normal (€20)</button>
+        <button onclick="buyVIPItem('Mercedes-Benz E55 AMG (W211)', '€30', 'https://cdn.discordapp.com/attachments/1126911091126046801/1377118974818517052/23179d-20240827231103_1.jpg?ex=6838763d&is=683724bd&hm=dc84f92672e2c7f95823aeee4c5bc2220123e60c0079d71fafb6d3a648c85340&')">Buy VIP (€30)</button>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+
+
+
+
+  <!--vehicle 5-->
+  <main id="vehicle-catalog">
+    <div id="vehicle-card">
+      <div id="vehicle-images">
+        <img id="main-img"  class="main-img" src="https://cdn.discordapp.com/attachments/1126911091126046801/1377123697449762837/ee3be7-obraz_2025-04-05_132856537.png?ex=68387aa3&is=68372923&hm=356668e7f4def8bebb1a55ab60cdcdd66e7a1c77027a8b444f7fadc66b5b5380&" alt="Elegy" />
+        <div id="image-thumbnails" class="image-thumbnails">
+          <img src="https://cdn.discordapp.com/attachments/1126911091126046801/1377123697449762837/ee3be7-obraz_2025-04-05_132856537.png?ex=68387aa3&is=68372923&hm=356668e7f4def8bebb1a55ab60cdcdd66e7a1c77027a8b444f7fadc66b5b5380&/300x200" onclick="changeMainImage(this)">
+          <img src="https://cdn.discordapp.com/attachments/1126911091126046801/1377123751040258048/ee3be7-obraz_2025-04-05_132902754.png?ex=68387aaf&is=6837292f&hm=e4d5861df780f178cf49c5fee7c08cd55ff3185b69f746e46de302fe6caebd55&/300x200?text=Angle+2" onclick="changeMainImage(this)">
+          <img src="https://cdn.discordapp.com/attachments/1126911091126046801/1377123840949227570/ee3be7-obraz_2025-04-05_132909383.png?ex=68387ac5&is=68372945&hm=83a1169d072f428f52e3450fab5aa12080dd7debe955d2b12658b393d2db9fa5&/300x200?text=Angle+3" onclick="changeMainImage(this)">
+        </div>
+      </div>
+
+      <div id="vehicle-info">
+        <h2>BMW M4 F82</h2>
+        <p>💰 Base Price: €20 (Normal) | VIP Price: €30</p>
+        <div id="buttons">
+          <button onclick="buyItem('BMW M4 F82', '€20', 'https://cdn.discordapp.com/attachments/1126911091126046801/1377123697449762837/ee3be7-obraz_2025-04-05_132856537.png?ex=68387aa3&is=68372923&hm=356668e7f4def8bebb1a55ab60cdcdd66e7a1c77027a8b444f7fadc66b5b5380&')">Buy Normal (€20)</button>
+        <button onclick="buyVIPItem('BMW M4 F82', '€30', 'https://cdn.discordapp.com/attachments/1126911091126046801/1377123697449762837/ee3be7-obraz_2025-04-05_132856537.png?ex=68387aa3&is=68372923&hm=356668e7f4def8bebb1a55ab60cdcdd66e7a1c77027a8b444f7fadc66b5b5380&')">Buy VIP (€30)</button>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+
+
+
+
+
+  <!--vehicle 6-->
+  <main id="vehicle-catalog">
+    <div id="vehicle-card">
+      <div id="vehicle-images">
+        <img id="main-img"  class="main-img" src="9.png" alt="Elegy" />
+        <div id="image-thumbnails" class="image-thumbnails">
+          <img src="9.png" onclick="changeMainImage(this)">
+          <img src="https://cdn.discordapp.com/attachments/1126911091126046801/1377123962378522644/15122b-2.png?ex=68387ae2&is=68372962&hm=9c5edc214eb8f80d701c4df07b3b2a9ad1afe3918ab3b5a2bc74ab05d7f77348&/300x200?text=Angle+2" onclick="changeMainImage(this)">
+          <img src="10.png" onclick="changeMainImage(this)">
+          <img src="11.png" onclick="changeMainImage(this)">
+          <img src="https://cdn.discordapp.com/attachments/1126911091126046801/1377124070222725202/15122b-7.png?ex=68387afc&is=6837297c&hm=eea63a874d11c292651a935e6910fd099b0385be1b6868663cb8f584f1fda628&/300x200?text=Angle+5" onclick="changeMainImage(this)">
+          <img src="https://cdn.discordapp.com/attachments/1126911091126046801/1377124102288052294/15122b-4.png?ex=68387b03&is=68372983&hm=5ef822321d46690b89d55bc065bde238aba9bad1ebf6924ea5060fcc8aeb3459&/300x200?text=Angle+6" onclick="changeMainImage(this)">
+        </div>
+      </div>
+
+      <div id="vehicle-info">
+        <h2>Lamborghini Autentica</h2>
+        <p>💰 Base Price: €20 (Normal) | VIP Price: €30</p>
+        <div id="buttons">
+          <button onclick="buyItem('Lamborghini Autentica', '€20', 'https://cdn.discordapp.com/attachments/1126911091126046801/1377123962378522644/15122b-2.png?ex=68387ae2&is=68372962&hm=9c5edc214eb8f80d701c4df07b3b2a9ad1afe3918ab3b5a2bc74ab05d7f77348&')">Buy Normal (€20)</button>
+        <button onclick="buyVIPItem('Lamborghini Autentica', '€30', 'https://cdn.discordapp.com/attachments/1126911091126046801/1377123962378522644/15122b-2.png?ex=68387ae2&is=68372962&hm=9c5edc214eb8f80d701c4df07b3b2a9ad1afe3918ab3b5a2bc74ab05d7f77348&')">Buy VIP (€30)</button>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+
+
+
+
+
+
+  <!--vehicle 7-->
+  <main id="vehicle-catalog">
+    <div id="vehicle-card">
+      <div id="vehicle-images">
+        <img id="main-img"  class="main-img" src="https://cdn.discordapp.com/attachments/1126911091126046801/1377124152053338182/58542f-3.jpg?ex=68387b0f&is=6837298f&hm=5a45504a66067cc048b6c00aa72253d97e4970c5e535a7b7eabbef1fc2589ee3&" alt="Elegy" />
+        <div id="image-thumbnails" class="image-thumbnails">
+          <img src="https://cdn.discordapp.com/attachments/1126911091126046801/1377124152053338182/58542f-3.jpg?ex=68387b0f&is=6837298f&hm=5a45504a66067cc048b6c00aa72253d97e4970c5e535a7b7eabbef1fc2589ee3&/300x200" onclick="changeMainImage(this)">
+          <img src="https://media.discordapp.net/attachments/1126911091126046801/1377124277522010243/58542f-4.jpg?ex=68387b2d&is=683729ad&hm=81b240eb6173b19edc41edb33a697cc3f72466436bc5f756e2fa280cbaf559f0&/300x200?text=Angle+2" onclick="changeMainImage(this)">
+          <img src="https://media.discordapp.net/attachments/1126911091126046801/1377124278029258792/58542f-5.jpg?ex=68387b2d&is=683729ad&hm=44868d7cd5fc92d13bd3d00694324aa53a13fa251fb300c3a486501f2fc93bdb&/300x200?text=Angle+3" onclick="changeMainImage(this)">
+          <img src="12.jpg" onclick="changeMainImage(this)">
+        </div>
+      </div>
+
+      <div id="vehicle-info">
+        <h2>Dodge Charger SRT Hellcat</h2>
+        <p>💰 Base Price: €20 (Normal) | VIP Price: €30</p>
+        <div id="buttons">
+          <button onclick="buyItem('Dodge Charger SRT Hellcat', '€20', 'https://cdn.discordapp.com/attachments/1126911091126046801/1377124152053338182/58542f-3.jpg?ex=68387b0f&is=6837298f&hm=5a45504a66067cc048b6c00aa72253d97e4970c5e535a7b7eabbef1fc2589ee3&')">Buy Normal (€20)</button>
+        <button onclick="buyVIPItem('Dodge Charger SRT Hellcat', '€30', 'https://cdn.discordapp.com/attachments/1126911091126046801/1377124152053338182/58542f-3.jpg?ex=68387b0f&is=6837298f&hm=5a45504a66067cc048b6c00aa72253d97e4970c5e535a7b7eabbef1fc2589ee3&')">Buy VIP (€30)</button>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+
+
+
+
+
+  <!--vehicle 8-->
+  <main id="vehicle-catalog">
+    <div id="vehicle-card">
+      <div id="vehicle-images">
+        <img id="main-img"  class="main-img" src="13.png" alt="Elegy" />
+        <div id="image-thumbnails" class="image-thumbnails">
+          <img src="13.png" onclick="changeMainImage(this)">
+          <img src="14.png" onclick="changeMainImage(this)">
+          <img src="15.png" onclick="changeMainImage(this)">
+          <img src="16.png" onclick="changeMainImage(this)">
+          <img src="17.jpeg" onclick="changeMainImage(this)">
+          <img src="18.jpeg" onclick="changeMainImage(this)">
+        </div>
+      </div>
+
+      <div id="vehicle-info">
+        <h2>Mercedes-AMG GT 63 S 4MATIC</h2>
+        <p>💰 Base Price: €20 (Normal) | VIP Price: €30</p>
+        <div id="buttons">
+          <button onclick="buyItem('Mercedes-AMG GT 63 S 4MATIC', '€20', 'https://i.postimg.cc/C1pMb7ws/13.png')">Buy Normal (€20)</button>
+        <button onclick="buyVIPItem('Mercedes-AMG GT 63 S 4MATIC', '€30', 'https://i.postimg.cc/C1pMb7ws/13.png')">Buy VIP (€30)</button>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+
+
+
+
+
+
+  <!--vehicle 9-->
+  <main id="vehicle-catalog">
+    <div id="vehicle-card">
+      <div id="vehicle-images">
+        <img id="main-img"  class="main-img" src="20.png" alt="Elegy" />
+        <div id="image-thumbnails" class="image-thumbnails">
+          <img src="20.png" onclick="changeMainImage(this)">
+          <img src="21.png" onclick="changeMainImage(this)">
+          <img src="22.png" onclick="changeMainImage(this)">
+          <img src="23.png" onclick="changeMainImage(this)">
+          <img src="24.png" onclick="changeMainImage(this)">
+          <img src="25.png" onclick="changeMainImage(this)">
+        </div>
+      </div>
+
+      <div id="vehicle-info">
+        <h2>Mercedes-AMG C 63 S E Performance</h2>
+        <p>💰 Base Price: €20 (Normal) | VIP Price: €30</p>
+        <div id="buttons">
+          <button onclick="buyItem('Mercedes-AMG C 63 S E Performance', '€20', 'https://i.postimg.cc/zXZM5Q0j/21.png')">Buy Normal (€20)</button>
+        <button onclick="buyVIPItem('Mercedes-AMG C 63 S E Performance', '€30', 'https://i.postimg.cc/zXZM5Q0j/21.png')">Buy VIP (€30)</button>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+
+
+
+
+
+
+  <!--vehicle 10-->
+  <main id="vehicle-catalog">
+    <div id="vehicle-card">
+      <div id="vehicle-images">
+        <img id="main-img"  class="main-img" src="30.png" alt="Elegy" />
+        <div id="image-thumbnails" class="image-thumbnails">
+          <img src="30.png" onclick="changeMainImage(this)">
+          <img src="31.png" onclick="changeMainImage(this)">
+          <img src="32.png" onclick="changeMainImage(this)">
+          <img src="33.png" onclick="changeMainImage(this)">
+          <img src="34.png" onclick="changeMainImage(this)">
+        <img src="35.png" onclick="changeMainImage(this)">        </div>
+      </div>
+
+      <div id="vehicle-info">
+        <h2>BMW M3 G81 Competition</h2>
+        <p>💰 Base Price: €20 (Normal) | VIP Price: €30</p>
+        <div id="buttons">
+          <button onclick="buyItem('BMW M3 G81 Competition', '€20', 'https://i.postimg.cc/yxBbhgJG/30.png')">Buy Normal (€20)</button>
+        <button onclick="buyVIPItem('BMW M3 G81 Competition', '€30', 'https://i.postimg.cc/yxBbhgJG/30.png')">Buy VIP (€30)</button>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+
+
+
+
+
+
+
+  <!--vehicle 11-->
+  <main id="vehicle-catalog">
+    <div id="vehicle-card">
+      <div id="vehicle-images">
+        <img id="main-img"  class="main-img" src="40.png" alt="Elegy" />
+        <div id="image-thumbnails" class="image-thumbnails">
+          <img src="40.png" onclick="changeMainImage(this)">
+          <img src="41.png" onclick="changeMainImage(this)">
+          <img src="42.png" onclick="changeMainImage(this)">
+          <img src="43.png" onclick="changeMainImage(this)">
+          <img src="44.png" onclick="changeMainImage(this)">
+        </div>
+      </div>
+
+      <div id="vehicle-info">
+        <h2>GOLF 8 R </h2>
+        <p>💰 Base Price: €20 (Normal) | VIP Price: €30</p>
+        <div id="buttons">
+          <button onclick="buyItem('GOLF 8 R ', '€20', 'https://i.postimg.cc/hPnr2QDD/40.png')">Buy Normal (€20)</button>
+        <button onclick="buyVIPItem('GOLF 8 R ', '€30', 'https://i.postimg.cc/hPnr2QDD/40.png')">Buy VIP (€30)</button>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+
+
+
+
+
+
+
+  <!--vehicle 12-->
+  <main id="vehicle-catalog">
+    <div id="vehicle-card">
+      <div id="vehicle-images">
+        <img id="main-img"  class="main-img" src="50.png" alt="Elegy" />
+        <div id="image-thumbnails" class="image-thumbnails">
+          <img src="50.png" onclick="changeMainImage(this)">
+          <img src="51.png" onclick="changeMainImage(this)">
+          <img src="52.png" onclick="changeMainImage(this)">
+          <img src="53.png" onclick="changeMainImage(this)">
+          <img src="54.png" onclick="changeMainImage(this)">
+          <img src="55.png" onclick="changeMainImage(this)">
+        </div>
+      </div>
+
+      <div id="vehicle-info">
+        <h2>GOLF R</h2>
+        <p>💰 Base Price: €20 (Normal) | VIP Price: €30</p>
+        <div id="buttons">
+          <button onclick="buyItem('GOLF R', '€20', 'https://i.postimg.cc/zvvJNG5V/55.png')">Buy Normal (€20)</button>
+        <button onclick="buyVIPItem('GOLF R', '€30', 'https://i.postimg.cc/zvvJNG5V/55.png')">Buy VIP (€30)</button>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--vehicle 13-->
+  <main id="vehicle-catalog">
+    <div id="vehicle-card">
+      <div id="vehicle-images">
+        <img id="main-img"  class="main-img" src="60.png" alt="Elegy" />
+        <div id="image-thumbnails" class="image-thumbnails">
+          <img src="60.png" onclick="changeMainImage(this)">
+          <img src="61.png" onclick="changeMainImage(this)">
+          <img src="62.png" onclick="changeMainImage(this)">
+          <img src="63.png" onclick="changeMainImage(this)">
+          <img src="64.png" onclick="changeMainImage(this)">
+          <img src="65.png" onclick="changeMainImage(this)">
+        </div>
+      </div>
+
+      <div id="vehicle-info">
+        <h2>BMW F82 M4</h2>
+        <p>💰 Base Price: €20 (Normal) | VIP Price: €30</p>
+        <div id="buttons">
+          <button onclick="buyItem('BMW F82 M4', '€20', 'https://i.postimg.cc/Jh77xqgN/60.png')">Buy Normal (€20)</button>
+        <button onclick="buyVIPItem('BMW F82 M4', '€30', 'https://i.postimg.cc/Jh77xqgN/60.png')">Buy VIP (€30)</button>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--vehicle 14-->
+  <main id="vehicle-catalog">
+    <div id="vehicle-card">
+      <div id="vehicle-images">
+        <img id="main-img"  class="main-img" src="70.png" alt="Elegy" />
+        <div id="image-thumbnails" class="image-thumbnails">
+          <img src="70.png" onclick="changeMainImage(this)">
+          <img src="71.png" onclick="changeMainImage(this)">
+          <img src="72.png" onclick="changeMainImage(this)">
+          <img src="73.png" onclick="changeMainImage(this)">
+          <img src="74.png" onclick="changeMainImage(this)">
+          <img src="75.png" onclick="changeMainImage(this)">
+        </div>
+      </div>
+
+      <div id="vehicle-info">
+        <h2>SRT</h2>
+        <p>💰 Base Price: €20 (Normal) | VIP Price: €30</p>
+        <div id="buttons">
+          <button onclick="buyItem('SRT', '€20', 'https://i.postimg.cc/mg5ppZpm/70.png')">Buy Normal (€20)</button>
+        <button onclick="buyVIPItem('SRT', '€30', 'https://i.postimg.cc/mg5ppZpm/70.png')">Buy VIP (€30)</button>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--vehicle 15-->
+  <main id="vehicle-catalog">
+    <div id="vehicle-card">
+      <div id="vehicle-images">
+        <img id="main-img"  class="main-img" src="80.webp" alt="Elegy" />
+        <div id="image-thumbnails" class="image-thumbnails">
+          <img src="80.webp" onclick="changeMainImage(this)">
+          <img src="81.webp" onclick="changeMainImage(this)">
+          <img src="82.webp" onclick="changeMainImage(this)">
+          <img src="83.jpg" onclick="changeMainImage(this)">
+        </div>
+      </div>
+
+      <div id="vehicle-info">
+        <h2>D MAX</h2>
+        <p>💰 Base Price: €20 (Normal) | VIP Price: €30</p>
+        <div id="buttons">
+          <button onclick="buyItem('D MAX', '€20', 'https://i.postimg.cc/MKhj9hby/80.webp')">Buy Normal (€20)</button>
+        <button onclick="buyVIPItem('D MAX', '€30', 'https://i.postimg.cc/MKhj9hby/80.webp')">Buy VIP (€30)</button>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--vehicle 16-->
+  <main id="vehicle-catalog">
+    <div id="vehicle-card">
+      <div id="vehicle-images">
+        <img id="main-img"  class="main-img" src="90.png" alt="Elegy" />
+        <div id="image-thumbnails" class="image-thumbnails">
+          <img src="90.png" onclick="changeMainImage(this)">
+          <img src="91.png" onclick="changeMainImage(this)">
+          <img src="92.png" onclick="changeMainImage(this)">
+          <img src="93.png" onclick="changeMainImage(this)">
+          <img src="94.png" onclick="changeMainImage(this)">
+          <img src="95.png" onclick="changeMainImage(this)">
+        </div>
+      </div>
+
+      <div id="vehicle-info">
+        <h2>G800 BRABUS</h2>
+        <p>💰 Base Price: €20 (Normal) | VIP Price: €30</p>
+        <div id="buttons">
+          <button onclick="buyItem('G800 BRABUS', '€20', 'https://i.postimg.cc/Jzp09vj6/90.png')">Buy Normal (€20)</button>
+        <button onclick="buyVIPItem('G800 BRABUS', '€30', 'https://i.postimg.cc/Jzp09vj6/90.png')">Buy VIP (€30)</button>
+
+        </div>
+      </div>
+    </div>
+  </main>
+  <script>
+    const token = localStorage.getItem("discord_token");
+    if (token) {
+      fetch("https://discord.com/api/users/@me", {
+        headers: { Authorization: `Bearer ${token}` }
+      })
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("user-name").textContent = data.username;
+        document.getElementById("user-avatar").src = `https://cdn.discordapp.com/avatars/${data.id}/${data.avatar}.png`;
+      })
+      .catch(() => {
+        document.getElementById("user-name").textContent = "User";
+      });
+    }
+  </script>
+
+
+
+  <script src="script.js" defer></script>
+</body>
+</html>
