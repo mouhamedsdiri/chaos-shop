@@ -18,22 +18,21 @@
 
   <script>
     const clientId = '1369437024586694666';
-    const redirectUri = 'https://mouhamedsdiri.github.io/chaos-roleplay-site/';
-    const scope = 'identify';
-    const responseType = 'token';
+const redirectUri = 'https://mouhamedsdiri.github.io/chaos-shop/';
+const scope = 'identify';
+const responseType = 'token';
 
-    document.getElementById('discord-login').href = 
-      `https://discord.com/api/oauth2/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=${responseType}&scope=${scope}`;
+document.getElementById('discord-login').href = 
+  `https://discord.com/api/oauth2/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=${responseType}&scope=${scope}`;
 
-    // Check if we were redirected back with a token
-    const fragment = new URLSearchParams(window.location.hash.slice(1));
-    const accessToken = fragment.get('access_token');
+const fragment = new URLSearchParams(window.location.hash.slice(1));
+const accessToken = fragment.get('access_token');
 
-    if (accessToken) {
-      // Save token if needed, or pass it along (e.g. to dashboard)
-      localStorage.setItem('discord_token', accessToken);
-      window.location.href = "/dashboard.html"; // redirect to dashboard
-    }
+if (accessToken) {
+  localStorage.setItem('discord_token', accessToken);
+  window.location.href = "https://mouhamedsdiri.github.io/chaos-shop/dashboard.html"; // ✅ FIXED REDIRECT
+}
+
   </script>
   <script src="script.js" defer></script>
 </body>
